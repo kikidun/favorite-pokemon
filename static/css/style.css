@@ -1,0 +1,154 @@
+/* style.css - Place in static/css/ directory */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #e3350d;  /* Pokemon red */
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #3b5ba7;  /* Pokemon blue */
+}
+
+/* Trainer section */
+.trainer-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#trainer-select {
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+#trainer-display {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#trainer-display img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Pokemon selection section */
+.pokemon-section {
+    margin-bottom: 40px;
+}
+
+.pokemon-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.pokemon-slot {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.pokemon-display {
+    height: 120px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-display img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Team display section */
+.team-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Searchable dropdown styling */
+.searchable-dropdown {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+}
+
+/* For eventual implementation of search functionality */
+.dropdown-container {
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.dropdown-options {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.dropdown-option {
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.dropdown-option:hover {
+    background-color: #f0f0f0;
+}

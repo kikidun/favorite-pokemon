@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Trainer Display</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Pokemon Trainer Display</h1>
+        
+        <div class="trainer-section">
+            <h2>Choose Your Trainer</h2>
+            <select id="trainer-select" class="searchable-dropdown">
+                <option value="">Select a Trainer</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="leaf">Leaf</option>
+                <option value="ethan">Ethan</option>
+                <option value="kris">Kris</option>
+                <!-- Add more trainer options as needed -->
+            </select>
+            
+            <div id="trainer-display">
+                <!-- Trainer sprite will be displayed here -->
+            </div>
+        </div>
+        
+        <div class="pokemon-section">
+            <h2>Choose Your Pokemon Team</h2>
+            <div class="pokemon-slots">
+                <div class="pokemon-slot">
+                    <label for="pokemon1">Pokemon 1:</label>
+                    <select id="pokemon1" class="pokemon-select searchable-dropdown">
+                        <option value="">Select Pokemon</option>
+                        <!-- Will be populated via JavaScript/API -->
+                    </select>
+                    <div class="pokemon-display" id="pokemon-display-1"></div>
+                </div>
+                
+                <div class="pokemon-slot">
+                    <label for="pokemon2">Pokemon 2:</label>
+                    <select id="pokemon2" class="pokemon-select searchable-dropdown">
+                        <option value="">Select Pokemon</option>
+                        <!-- Will be populated via JavaScript/API -->
+                    </select>
+                    <div class="pokemon-display" id="pokemon-display-2"></div>
+                </div>
+                
+                <div class="pokemon-slot">
+                    <label for="pokemon3">Pokemon 3:</label>
+                    <select id="pokemon3" class="pokemon-select searchable-dropdown">
+                        <option value="">Select Pokemon</option>
+                        <!-- Will be populated via JavaScript/API -->
+                    </select>
+                    <div class="pokemon-display" id="pokemon-display-3"></div>
+                </div>
+                
+                <div class="pokemon-slot">
+                    <label for="pokemon4">Pokemon 4:</label>
+                    <select id="pokemon4" class="pokemon-select searchable-dropdown">
+                        <option value="">Select Pokemon</option>
+                        <!-- Will be populated via JavaScript/API -->
+                    </select>
+                    <div class="pokemon-display" id="pokemon-display-4"></div>
+                </div>
+                
+                <div class="pokemon-slot">
+                    <label for="pokemon5">Pokemon 5:</label>
+                    <select id="pokemon5" class="pokemon-select searchable-dropdown">
+                        <option value="">Select Pokemon</option>
+                        <!-- Will be populated via JavaScript/API -->
+                    </select>
+                    <div class="pokemon-display" id="pokemon-display-5"></div>
+                </div>
+                
+                <div class="pokemon-slot">
+                    <label for="pokemon6">Pokemon 6:</label>
+                    <select id="pokemon6" class="pokemon-select searchable-dropdown">
+                        <option value="">Select Pokemon</option>
+                        <!-- Will be populated via JavaScript/API -->
+                    </select>
+                    <div class="pokemon-display" id="pokemon-display-6"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="team-display">
+            <!-- Complete team display will go here -->
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
