@@ -4,6 +4,43 @@ async function fetchPokemon() {
     return data;
 }
 
+function parsePokemon(data) {
+    const pokemon = new Map();
+    data.results.forEach(result => {
+        var id = result.url.split('/').filter(Boolean).pop();
+        pokemon.set(id, {name: result.name, url: result.url});
+    });
+    return pokemon;
+}
+
+function populateDropdown(pokeMap) {
+    const selects = document.querySelectorAll('.pokemon-select');
+    selects.forEach(select => {
+        pokeMap.forEach(({name, url}, id) => {
+            const option = document.createElement('option');
+            option.value = id;
+            option.textContent = name;
+            select.appendChild(option); 
+        });
+    });
+}
+
+async function initializeDropdowns() {
+    try {
+        const data = await fetchPokemon();
+        const pokeMap = parsePokemon(data);
+        populateDropdown(pokeMap);
+    } catch (error) {
+        console.error('Error fetching Pokemon:', error);
+    }
+
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeDropdowns();
+});
+
+//Function to test the fetchPokemon function
 fetchPokemon().then(data => {
     // Log the total count
     console.log(`Total Pokemon: ${data.results.length}`);
